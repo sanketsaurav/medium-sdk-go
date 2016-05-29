@@ -83,6 +83,7 @@ type CreatePostOptions struct {
 	CanonicalURL  string        `json:"canonicalUrl,omitempty"`
 	PublishStatus publishStatus `json:"publishStatus,omitempty"`
 	License       license       `json:"license,omitempty"`
+	PublishedAt   string        `json:"publishedAt,omitempty"`
 }
 
 // UploadOptions defines the options for uploading files to Medium.
@@ -119,6 +120,7 @@ type Post struct {
 	URL          string        `json:"url"`
 	CanonicalURL string        `json:"canonicalUrl"`
 	PublishState publishStatus `json:"publishStatus"`
+	PublishedAt  int64         `json:"publishedAt"`
 	License      license       `json:"license"`
 	LicenseURL   string        `json:"licenseUrl"`
 }
